@@ -379,10 +379,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f7ac48dee10a549b6878e60e9baed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpperLimit: 3.5
-  LowerLimit: -3.5
-  spawnInterval: 3
+  upperLimit: 3.75
+  lowerLimit: -3.75
+  baseSpeed: 5
+  incrementSpeed: 0.5
   towerObject: {fileID: 6071539888278342405, guid: e7089a371245c204894ef83c7f160912, type: 3}
+  spawnInterval: 3
+  timer: 0
 --- !u!1 &1154849328
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionSprite: {fileID: 2442940666380214438, guid: 00b96f889714dba49bcddef94fb777b6, type: 3}
-  force: 0.85
+  force: 12
 --- !u!50 &2030020520
 Rigidbody2D:
   serializedVersion: 4

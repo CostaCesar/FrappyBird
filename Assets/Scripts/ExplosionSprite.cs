@@ -12,7 +12,6 @@ public class ExplosionSprite : MonoBehaviour
     {
         for(int i = 0; i < frames.Length; i++)
         {
-            Debug.Log("Iteration " + i);
             GetComponent<SpriteRenderer>().sprite = frames[i];
             yield return new WaitForSecondsRealtime(Random.Range(0.2f, 0.33f));
         }

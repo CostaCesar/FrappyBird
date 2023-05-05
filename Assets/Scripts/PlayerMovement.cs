@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(Input.GetButton("Fire1") == true || Input.GetButton("Jump"))
         {
@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
         ExplosionSprite obj = Instantiate(explosionSprite, transform.position, transform.rotation)
             .GetComponent<ExplosionSprite>();
         StartCoroutine(Reset(obj));
-        this.rb.velocity = Vector3.zero;
     }
 
     private IEnumerator Reset(ExplosionSprite obj)
@@ -43,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
             Destroy(x);
 
         transform.position = new Vector3(-6, 0, 0);
+        
+        TowerSpawner spawner = GameObject.Find("Towers").GetComponent<TowerSpawner>();
+        spawner.timer = Time.time;
+        spawner.spawnInterval = 3;
+
         yield return new WaitForSecondsRealtime(2);
         this.rb.velocity = Vector3.zero;
         Time.timeScale = 1;

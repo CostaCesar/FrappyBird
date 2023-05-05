@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class TowerMovement : MonoBehaviour
 {
+    public float speed;
     [SerializeField]
-    private float speed;
+    private Sprite[] sprites;
+
+    private void Start() 
+    {
+        GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
+    }
 
     // Update is called once per frame
     void Update()
