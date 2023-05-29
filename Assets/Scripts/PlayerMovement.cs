@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = new Vector3(-6, 0, 0);
         
-        TowerSpawner spawner = GameObject.Find("Towers").GetComponent<TowerSpawner>();
+        Spawner spawner = GameObject.Find("TowerSpawner").GetComponent<Spawner>();
         spawner.timer = Time.time;
         spawner.spawnInterval = 3;
 
