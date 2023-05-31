@@ -27,9 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Time.timeScale = 0;
         ExplosionSprite obj = Instantiate(explosionSprite, transform.position, transform.rotation)
             .GetComponent<ExplosionSprite>();
-        StartCoroutine(GetComponent<Reset>().RestartGame(obj));
+        GetComponent<Reset>().TriggerRestart(obj);
     }
 }

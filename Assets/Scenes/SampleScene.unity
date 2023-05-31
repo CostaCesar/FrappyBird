@@ -499,7 +499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1030733564
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 1947419701}
   - component: {fileID: 1947419700}
   m_Layer: 5
-  m_Name: Button
+  m_Name: RestartBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1528,3 +1528,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ce905ab17e946e7ac10591798ebba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartMenu: {fileID: 1030733563}
