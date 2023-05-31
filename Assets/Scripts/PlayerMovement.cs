@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ExplosionSprite obj = Instantiate(explosionSprite, transform.position, transform.rotation)
             .GetComponent<ExplosionSprite>();
+        transform.position = new Vector3(transform.position.x, transform.position.y, 5);
         GetComponent<Reset>().TriggerRestart(obj);
     }
 }

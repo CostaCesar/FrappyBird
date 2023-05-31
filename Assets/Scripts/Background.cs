@@ -16,7 +16,7 @@ public class Background : MonoBehaviour
     void Update()
     {
         speed = spawner.GetCurrentSpeed() / 3;
-        transform.position += Vector3.left * speed * Time.deltaTime;
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
         if(transform.position.x < -22.45f)
         {
             transform.position = new Vector3(22.44f, -2, 0);
