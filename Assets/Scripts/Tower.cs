@@ -18,8 +18,7 @@ public class Tower: MonoBehaviour
     {
         if(player.transform.position.x > transform.position.x && scoreManager.timer < 0)
         {
-            scoreManager.timer = 1.5f;
-            scoreManager.score++;
+            scoreManager.AddScore();
         }
     }
 }
