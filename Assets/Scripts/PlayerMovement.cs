@@ -30,25 +30,6 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 0;
         ExplosionSprite obj = Instantiate(explosionSprite, transform.position, transform.rotation)
             .GetComponent<ExplosionSprite>();
-        StartCoroutine(Reset(obj));
-    }
-
-    private IEnumerator Reset(ExplosionSprite obj)
-    {
-        yield return obj.Explode();
-        
-        GameObject[] toDestroy = GameObject.FindGameObjectsWithTag("Killer");
-        foreach(GameObject x in toDestroy)
-            Destroy(x);
-
-        transform.position = new Vector3(-6, 0, 0);
-        
-        Spawner spawner = GameObject.Find("TowerSpawner").GetComponent<Spawner>();
-        spawner.timer = Time.time;
-        spawner.spawnInterval = 3;
-
-        yield return new WaitForSecondsRealtime(2);
-        this.rb.velocity = Vector3.zero;
-        Time.timeScale = 1;
+        StartCoroutine(GetComponent<Reset>().RestartGame(obj));
     }
 }
