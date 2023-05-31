@@ -8,11 +8,11 @@ public class Score : MonoBehaviour
 {
     public int score = 0;
     public float timer;
-    private AudioSource sound;
+    private SoundEffects sound;
 
     private void Start()
     {
-        sound = GameObject.Find("Sounds").GetComponent<AudioSource>();
+        sound = GameObject.Find("Sounds").GetComponent<SoundEffects>();
     }
 
     public void ResetTimer()
@@ -29,7 +29,7 @@ public class Score : MonoBehaviour
     {
         ResetTimer();
         score++;
-        sound.Play();
+        sound.PlayScore();
     }
 
     public void ShowScore()

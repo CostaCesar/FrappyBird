@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297487457}
   - component: {fileID: 297487456}
+  - component: {fileID: 297487458}
   m_Layer: 0
   m_Name: Sounds
   m_TagString: Untagged
@@ -251,6 +252,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &297487458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297487455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6eb8b10502ec958b69f3dfa50580f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSound: {fileID: 8300000, guid: fc9e4949745c13ad3a068bc6537e9577, type: 3}
+  explosionSound: {fileID: 8300000, guid: 5ea6812e6cd717930a3d3963cfc19b66, type: 3}
 --- !u!1 &309435104
 GameObject:
   m_ObjectHideFlags: 0

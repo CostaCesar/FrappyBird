@@ -8,8 +8,12 @@ public class ExplosionSprite : MonoBehaviour
     private Sprite[] frames;
     [SerializeField]
     private float framesPerSecond;
+    private SoundEffects sound;
+
     public IEnumerator Explode()
     {
+        sound = GameObject.Find("Sounds").GetComponent<SoundEffects>();
+        sound.PlayExplosion();
         for(int i = 0; i < frames.Length; i++)
         {
             GetComponent<SpriteRenderer>().sprite = frames[i];
