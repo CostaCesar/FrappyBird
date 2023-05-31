@@ -48,6 +48,7 @@ public class Reset : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(3);
         restartMenu.SetActive(true);
+        GameObject.Find("ScoreManager").GetComponent<Score>().ShowScore();
         restartMenu.transform.Find("RestartBtn").GetComponent<Button>()
             .onClick.AddListener(RestartWrapper);
     }
