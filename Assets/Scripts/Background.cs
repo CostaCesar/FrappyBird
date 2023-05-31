@@ -19,7 +19,7 @@ public class Background : MonoBehaviour
         transform.position += Vector3.left * speed * Time.deltaTime;
         if(transform.position.x < -22.45f)
         {
-            transform.position = new Vector3(22.45f, -2, 0);
+            transform.position = new Vector3(22.44f, -2, 0);
         }
     }
 }
